@@ -10,6 +10,8 @@
 		0AA08EDA2374BCA800D27CCB /* PulsarDatasource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */; };
 		0AA08EDF2374BCA800D27CCB /* PulsarDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */; };
 		0AA08EE12374BCA800D27CCB /* PulsarDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AA08EEB2374C1C300D27CCB /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA08EEA2374C1C300D27CCB /* DataParser.swift */; };
+		0AA08EED2374C1E500D27CCB /* PulsarCatalogue.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AA08EEC2374C1E500D27CCB /* PulsarCatalogue.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		0AA08ED92374BCA800D27CCB /* PulsarDatasourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsarDatasourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarDatasourceTests.swift; sourceTree = "<group>"; };
 		0AA08EE02374BCA800D27CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA08EEA2374C1C300D27CCB /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		0AA08EEC2374C1E500D27CCB /* PulsarCatalogue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PulsarCatalogue.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,10 @@
 		0AA08ED22374BCA800D27CCB /* PulsarDatasource */ = {
 			isa = PBXGroup;
 			children = (
+				0AA08EEC2374C1E500D27CCB /* PulsarCatalogue.txt */,
 				0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */,
 				0AA08ED42374BCA800D27CCB /* Info.plist */,
+				0AA08EEA2374C1C300D27CCB /* DataParser.swift */,
 			);
 			path = PulsarDatasource;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					0AA08ECF2374BCA800D27CCB = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					0AA08ED82374BCA800D27CCB = {
 						CreatedOnToolsVersion = 11.1;
@@ -178,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA08EED2374C1E500D27CCB /* PulsarCatalogue.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA08EEB2374C1C300D27CCB /* DataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		0AA08EE52374BCA800D27CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Z7U543763F;
@@ -356,6 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.PulsarDatasource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +375,7 @@
 		0AA08EE62374BCA800D27CCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Z7U543763F;
@@ -388,6 +400,7 @@
 		0AA08EE82374BCA800D27CCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7U543763F;
 				INFOPLIST_FILE = PulsarDatasourceTests/Info.plist;
@@ -406,6 +419,7 @@
 		0AA08EE92374BCA800D27CCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7U543763F;
 				INFOPLIST_FILE = PulsarDatasourceTests/Info.plist;

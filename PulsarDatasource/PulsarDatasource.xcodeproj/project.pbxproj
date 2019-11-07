@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0AA08EDA2374BCA800D27CCB /* PulsarDatasource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */; };
+		0AA08EDF2374BCA800D27CCB /* PulsarDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */; };
+		0AA08EE12374BCA800D27CCB /* PulsarDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AA08EDB2374BCA800D27CCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AA08EC72374BCA800D27CCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AA08ECF2374BCA800D27CCB;
+			remoteInfo = PulsarDatasource;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PulsarDatasource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PulsarDatasource.h; sourceTree = "<group>"; };
+		0AA08ED42374BCA800D27CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AA08ED92374BCA800D27CCB /* PulsarDatasourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsarDatasourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarDatasourceTests.swift; sourceTree = "<group>"; };
+		0AA08EE02374BCA800D27CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AA08ECD2374BCA800D27CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA08ED62374BCA800D27CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA08EDA2374BCA800D27CCB /* PulsarDatasource.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AA08EC62374BCA800D27CCB = {
+			isa = PBXGroup;
+			children = (
+				0AA08ED22374BCA800D27CCB /* PulsarDatasource */,
+				0AA08EDD2374BCA800D27CCB /* PulsarDatasourceTests */,
+				0AA08ED12374BCA800D27CCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0AA08ED12374BCA800D27CCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */,
+				0AA08ED92374BCA800D27CCB /* PulsarDatasourceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AA08ED22374BCA800D27CCB /* PulsarDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */,
+				0AA08ED42374BCA800D27CCB /* Info.plist */,
+			);
+			path = PulsarDatasource;
+			sourceTree = "<group>";
+		};
+		0AA08EDD2374BCA800D27CCB /* PulsarDatasourceTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */,
+				0AA08EE02374BCA800D27CCB /* Info.plist */,
+			);
+			path = PulsarDatasourceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AA08ECB2374BCA800D27CCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA08EE12374BCA800D27CCB /* PulsarDatasource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AA08ECF2374BCA800D27CCB /* PulsarDatasource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA08EE42374BCA800D27CCB /* Build configuration list for PBXNativeTarget "PulsarDatasource" */;
+			buildPhases = (
+				0AA08ECB2374BCA800D27CCB /* Headers */,
+				0AA08ECC2374BCA800D27CCB /* Sources */,
+				0AA08ECD2374BCA800D27CCB /* Frameworks */,
+				0AA08ECE2374BCA800D27CCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PulsarDatasource;
+			productName = PulsarDatasource;
+			productReference = 0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0AA08ED82374BCA800D27CCB /* PulsarDatasourceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AA08EE72374BCA800D27CCB /* Build configuration list for PBXNativeTarget "PulsarDatasourceTests" */;
+			buildPhases = (
+				0AA08ED52374BCA800D27CCB /* Sources */,
+				0AA08ED62374BCA800D27CCB /* Frameworks */,
+				0AA08ED72374BCA800D27CCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AA08EDC2374BCA800D27CCB /* PBXTargetDependency */,
+			);
+			name = PulsarDatasourceTests;
+			productName = PulsarDatasourceTests;
+			productReference = 0AA08ED92374BCA800D27CCB /* PulsarDatasourceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AA08EC72374BCA800D27CCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = EsmaGO;
+				TargetAttributes = {
+					0AA08ECF2374BCA800D27CCB = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					0AA08ED82374BCA800D27CCB = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 0AA08ECA2374BCA800D27CCB /* Build configuration list for PBXProject "PulsarDatasource" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AA08EC62374BCA800D27CCB;
+			productRefGroup = 0AA08ED12374BCA800D27CCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AA08ECF2374BCA800D27CCB /* PulsarDatasource */,
+				0AA08ED82374BCA800D27CCB /* PulsarDatasourceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AA08ECE2374BCA800D27CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA08ED72374BCA800D27CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AA08ECC2374BCA800D27CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AA08ED52374BCA800D27CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA08EDF2374BCA800D27CCB /* PulsarDatasourceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AA08EDC2374BCA800D27CCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AA08ECF2374BCA800D27CCB /* PulsarDatasource */;
+			targetProxy = 0AA08EDB2374BCA800D27CCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0AA08EE22374BCA800D27CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0AA08EE32374BCA800D27CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0AA08EE52374BCA800D27CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z7U543763F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PulsarDatasource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.PulsarDatasource;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AA08EE62374BCA800D27CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z7U543763F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PulsarDatasource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.PulsarDatasource;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AA08EE82374BCA800D27CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7U543763F;
+				INFOPLIST_FILE = PulsarDatasourceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.PulsarDatasourceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AA08EE92374BCA800D27CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z7U543763F;
+				INFOPLIST_FILE = PulsarDatasourceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.PulsarDatasourceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AA08ECA2374BCA800D27CCB /* Build configuration list for PBXProject "PulsarDatasource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA08EE22374BCA800D27CCB /* Debug */,
+				0AA08EE32374BCA800D27CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA08EE42374BCA800D27CCB /* Build configuration list for PBXNativeTarget "PulsarDatasource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA08EE52374BCA800D27CCB /* Debug */,
+				0AA08EE62374BCA800D27CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AA08EE72374BCA800D27CCB /* Build configuration list for PBXNativeTarget "PulsarDatasourceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA08EE82374BCA800D27CCB /* Debug */,
+				0AA08EE92374BCA800D27CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AA08EC72374BCA800D27CCB /* Project object */;
+}

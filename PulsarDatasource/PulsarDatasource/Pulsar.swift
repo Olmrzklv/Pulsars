@@ -18,7 +18,10 @@ public class Pulsar {
     var z: Float!
     
     private let R: Float = 9.80
-    var color: UIColor!
+    
+    var color: UIColor {
+        return .randomColor
+    }
 
     
     init(name: String, RAJ: String, DECJ: String, frequency: Double) {

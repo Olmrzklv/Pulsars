@@ -12,6 +12,8 @@
 		0AA08EDA2374BCA800D27CCB /* PulsarDatasource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */; };
 		0AA08EDF2374BCA800D27CCB /* PulsarDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */; };
 		0AA08EE12374BCA800D27CCB /* PulsarDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AE43DA62383319F00357BD1 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE43DA52383319F00357BD1 /* UIColorExtensions.swift */; };
+		0AE43DA82383322F00357BD1 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE43DA72383322F00357BD1 /* CGFloatExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		0AA08ED92374BCA800D27CCB /* PulsarDatasourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsarDatasourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarDatasourceTests.swift; sourceTree = "<group>"; };
 		0AA08EE02374BCA800D27CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE43DA52383319F00357BD1 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		0AE43DA72383322F00357BD1 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				0AA08ED42374BCA800D27CCB /* Info.plist */,
 				0A05B72B2375E48100C6B752 /* Pulsar.swift */,
 				0A7BEAEA237C8D9D00672B2C /* Datasource.swift */,
+				0AE43DA9238332DB00357BD1 /* Extensions */,
 			);
 			path = PulsarDatasource;
 			sourceTree = "<group>";
@@ -90,6 +95,15 @@
 				0AA08EE02374BCA800D27CCB /* Info.plist */,
 			);
 			path = PulsarDatasourceTests;
+			sourceTree = "<group>";
+		};
+		0AE43DA9238332DB00357BD1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AE43DA72383322F00357BD1 /* CGFloatExtensions.swift */,
+				0AE43DA52383319F00357BD1 /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE43DA62383319F00357BD1 /* UIColorExtensions.swift in Sources */,
 				0A7BEAEB237C8D9D00672B2C /* Datasource.swift in Sources */,
+				0AE43DA82383322F00357BD1 /* CGFloatExtensions.swift in Sources */,
 				0A05B72C2375E48100C6B752 /* Pulsar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

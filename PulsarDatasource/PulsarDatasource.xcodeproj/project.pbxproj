@@ -12,7 +12,6 @@
 		0AA08EDA2374BCA800D27CCB /* PulsarDatasource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA08ED02374BCA800D27CCB /* PulsarDatasource.framework */; };
 		0AA08EDF2374BCA800D27CCB /* PulsarDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */; };
 		0AA08EE12374BCA800D27CCB /* PulsarDatasource.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AA08EED2374C1E500D27CCB /* PulsarCatalogue.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0AA08EEC2374C1E500D27CCB /* PulsarCatalogue.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +33,6 @@
 		0AA08ED92374BCA800D27CCB /* PulsarDatasourceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulsarDatasourceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarDatasourceTests.swift; sourceTree = "<group>"; };
 		0AA08EE02374BCA800D27CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AA08EEC2374C1E500D27CCB /* PulsarCatalogue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PulsarCatalogue.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +75,6 @@
 		0AA08ED22374BCA800D27CCB /* PulsarDatasource */ = {
 			isa = PBXGroup;
 			children = (
-				0AA08EEC2374C1E500D27CCB /* PulsarCatalogue.txt */,
 				0AA08ED32374BCA800D27CCB /* PulsarDatasource.h */,
 				0AA08ED42374BCA800D27CCB /* Info.plist */,
 				0A05B72B2375E48100C6B752 /* Pulsar.swift */,
@@ -188,7 +185,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AA08EED2374C1E500D27CCB /* PulsarCatalogue.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

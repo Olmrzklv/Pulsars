@@ -14,7 +14,7 @@ public struct Datasource {
         return pulsarWithFrequencyRange(min:150, max:1000)
     }
        
-    func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar]{
+    func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar] {
         var audibles:[Pulsar] = []
         for pulsarData in pulsars {
             if min<pulsarData.frequency  && pulsarData.frequency<max {

@@ -8,13 +8,14 @@
 
 import Foundation
 
-public struct Datasource {
-    
-    var audiblePulsars:[Pulsar] {
-        return pulsarWithFrequencyRange(min:150, max:1000)
-    }
-       
-    func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar] {
+protocol PulsarDatasource {
+    static var pulsars:[(name: String, RAJ: String, DECJ: String, frequency: Double)] { get }
+    static func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar]
+}
+
+extension PulsarDatasource {
+    ///Returns pulsars within given range. 
+    static func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar] {
         var audibles:[Pulsar] = []
         for pulsarData in pulsars {
             if min<pulsarData.frequency  && pulsarData.frequency<max {
@@ -24,9 +25,16 @@ public struct Datasource {
         }
         return audibles
     }
+}
+
+public struct Datasource: PulsarDatasource {
     
+    /// Range of audible frequencies for humans is 20 to 20,000 Hz.
+    static var audiblePulsars:[Pulsar] {
+        return pulsarWithFrequencyRange(min:20, max:20000)
+    }
     
-    fileprivate let pulsars:[(name: String, RAJ: String, DECJ: String, frequency: Double)] = [
+    static let pulsars:[(name: String, RAJ: String, DECJ: String, frequency: Double)] = [
         ("J0006+1834", "00:06:04.8", "+18:34:59", 1.441446282),
         ("J0007+7303", "00:07:01.7", "+73:03:07.4", 3.165827392),
         ("B0011+47", "00:14:17.75", "+47:46:33.4", 0.8059972391),

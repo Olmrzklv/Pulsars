@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0A05B72C2375E48100C6B752 /* Pulsar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05B72B2375E48100C6B752 /* Pulsar.swift */; };
 		0A7BEAEB237C8D9D00672B2C /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7BEAEA237C8D9D00672B2C /* Datasource.swift */; };
-		0A807079238AF64700FE6E11 /* PulsarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A807078238AF64700FE6E11 /* PulsarTests.swift */; };
 		0A80707B238AFD9000FE6E11 /* EquatorialToSphericalConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80707A238AFD9000FE6E11 /* EquatorialToSphericalConverter.swift */; };
 		0A80707D238AFDFD00FE6E11 /* ClockStringToDecimalConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80707C238AFDFD00FE6E11 /* ClockStringToDecimalConverter.swift */; };
 		0A807081238AFEC000FE6E11 /* EquatorialToSphericalConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A807080238AFEC000FE6E11 /* EquatorialToSphericalConverterTests.swift */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		0A05B72B2375E48100C6B752 /* Pulsar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsar.swift; sourceTree = "<group>"; };
 		0A7BEAEA237C8D9D00672B2C /* Datasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
-		0A807078238AF64700FE6E11 /* PulsarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarTests.swift; sourceTree = "<group>"; };
 		0A80707A238AFD9000FE6E11 /* EquatorialToSphericalConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatorialToSphericalConverter.swift; sourceTree = "<group>"; };
 		0A80707C238AFDFD00FE6E11 /* ClockStringToDecimalConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockStringToDecimalConverter.swift; sourceTree = "<group>"; };
 		0A807080238AFEC000FE6E11 /* EquatorialToSphericalConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquatorialToSphericalConverterTests.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				0A807082238AFECD00FE6E11 /* ClockStringToDecimalConverterTests.swift */,
 				0A807080238AFEC000FE6E11 /* EquatorialToSphericalConverterTests.swift */,
 				0AA08EDE2374BCA800D27CCB /* PulsarDatasourceTests.swift */,
-				0A807078238AF64700FE6E11 /* PulsarTests.swift */,
 				0AA08EE02374BCA800D27CCB /* Info.plist */,
 			);
 			path = PulsarDatasourceTests;
@@ -244,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A807079238AF64700FE6E11 /* PulsarTests.swift in Sources */,
 				0A807081238AFEC000FE6E11 /* EquatorialToSphericalConverterTests.swift in Sources */,
 				0AA08EDF2374BCA800D27CCB /* PulsarDatasourceTests.swift in Sources */,
 				0A807083238AFECD00FE6E11 /* ClockStringToDecimalConverterTests.swift in Sources */,

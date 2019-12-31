@@ -16,6 +16,7 @@
 		0A992C8823AF82EA001F7B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A992C8623AF82EA001F7B28 /* LaunchScreen.storyboard */; };
 		0A992C9323AF82EA001F7B28 /* SoundOfPulsarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992C9223AF82EA001F7B28 /* SoundOfPulsarsTests.swift */; };
 		0A992C9E23AF82EB001F7B28 /* SoundOfPulsarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992C9D23AF82EB001F7B28 /* SoundOfPulsarsUITests.swift */; };
+		0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CB223AFA802001F7B28 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		0A992C9923AF82EB001F7B28 /* SoundOfPulsarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundOfPulsarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A992C9D23AF82EB001F7B28 /* SoundOfPulsarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundOfPulsarsUITests.swift; sourceTree = "<group>"; };
 		0A992C9F23AF82EB001F7B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A992CB223AFA802001F7B28 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		0A992C7A23AF82E9001F7B28 /* SoundOfPulsars */ = {
 			isa = PBXGroup;
 			children = (
+				0A992CB123AFA7F5001F7B28 /* Extensions */,
 				0A992C7B23AF82E9001F7B28 /* AppDelegate.swift */,
 				0A992C7D23AF82E9001F7B28 /* SceneDelegate.swift */,
 				0A992C7F23AF82E9001F7B28 /* PulsarViewController.swift */,
@@ -174,6 +177,14 @@
 				0A992C9F23AF82EB001F7B28 /* Info.plist */,
 			);
 			path = SoundOfPulsarsUITests;
+			sourceTree = "<group>";
+		};
+		0A992CB123AFA7F5001F7B28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A992CB223AFA802001F7B28 /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A992C8023AF82E9001F7B28 /* PulsarViewController.swift in Sources */,
+				0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */,
 				0A992C7C23AF82E9001F7B28 /* AppDelegate.swift in Sources */,
 				0A992C7E23AF82E9001F7B28 /* SceneDelegate.swift in Sources */,
 			);

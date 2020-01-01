@@ -9,7 +9,7 @@
 import SceneKit
 import PulsarDatasource
 
-class TextNode: SCNNode {
+final class TextNode: SCNNode {
     
     convenience init(with pulsar: Pulsar) {
         let pulsarName = SCNText(string: pulsar.name, extrusionDepth: 0.0001)

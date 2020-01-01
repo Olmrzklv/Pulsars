@@ -8,7 +8,7 @@
 
 import SceneKit
 
-class PulsarNode: SCNNode {
+final class PulsarNode: SCNNode {
     
     convenience init(with pulsar: Pulsar) {
         let pulsarGeometry = SCNSphere(radius: 0.05)

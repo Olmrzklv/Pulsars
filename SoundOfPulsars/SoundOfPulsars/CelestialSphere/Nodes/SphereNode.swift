@@ -9,16 +9,13 @@
 import SceneKit
 
 final class SphereNode: SCNNode {
-    
-    static func createCelestialSphere() -> SCNNode {
-        let sphere = SCNSphere(radius: 10)
-        sphere.firstMaterial?.diffuse.contents = UIImage.starMap
-        sphere.firstMaterial?.isDoubleSided = true
-        let celestialSphereNode = SCNNode(geometry: sphere)
+    static func createCelestialSphereNode() -> SCNNode {
+        let celestialSphereNode = SCNNode()
+        celestialSphereNode.geometry = SCNSphere(radius: 10)
+        celestialSphereNode.geometry?.firstMaterial?.isDoubleSided = true
+        celestialSphereNode.geometry?.firstMaterial?.diffuse.contents = UIImage.starMap
         celestialSphereNode.position = SCNVector3Make(0, 0, 0)
-        celestialSphereNode.physicsBody = SCNPhysicsBody.kinematic()
         return celestialSphereNode
     }
-    
 }
 

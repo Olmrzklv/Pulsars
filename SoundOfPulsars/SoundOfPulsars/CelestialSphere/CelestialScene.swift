@@ -10,32 +10,40 @@ import UIKit
 import SceneKit
 
 /* Celestial Scene Tree Structure:
-                CelestialScene.rootNode
-                /                      \
-            CAMERA NODE            SPHERE NODE
-                                 /     |       \
-                                /      |        \
-                        PULSAR NODE TEXT NODE  CIRCLE NODE
-                                             /     |    \
-                                            /      |     \
-                                      Paralel   Meridian  Horizon
+                C E L E S T I A L  S C E N E'S  R O O T  N O D E
+                /                 |            \              \
+            CAMERA NODE      SPHERE NODE       LIGHT NODE   HORIZON
+                           /     |       \
+                          /      |        \
+                PULSAR NODE TEXT NODE  CIRCLE NODE
+                                        /     \
+                                       /       \
+                                   PARALEL   MERIDIAN
  
  */
+
 final class CelestialScene: SCNScene {
     
     var cameraNode: SCNNode!
     var sphereNode: SCNNode!
+    var circleNode: SCNNode!
         
-    convenience init(sphere: SCNNode, camera: SCNNode) {
+    convenience init(sphere: SCNNode, camera: SCNNode, circles: SCNNode) {
         self.init()
         
         self.cameraNode = camera
         self.sphereNode = sphere
+        self.circleNode = circles
+        
+        self.setupNodes()
     }
     
-    func setup() {
+    func setupNodes() {
         self.rootNode.addChildNode(sphereNode)
         self.rootNode.addChildNode(cameraNode)
+        self.rootNode.addChildNode(CelestialNode.Light)
+        self.rootNode.addChildNode(CelestialNode.Horizon)
+        self.sphereNode.addChildNode(circleNode)
     }
     
     

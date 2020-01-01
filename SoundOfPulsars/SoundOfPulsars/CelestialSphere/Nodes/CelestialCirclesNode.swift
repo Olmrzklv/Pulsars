@@ -9,19 +9,16 @@
 import SceneKit
 
 ///Describes Parallels, The Equator, Meridians, and Horizon Nodes
-final class CircleNode: SCNNode {
+final class CelestialCirclesNode: SCNNode {
     
     private var paralelsNode: SCNNode!
     private var meridiansNode: SCNNode!
-    private var horizonNode: SCNNode!
     
-    convenience override init() {
-        self.init()
+    func createCelestialCirclesNode() {
         paralelsNode = createParalels()
         meridiansNode = createMeridians()
-        horizonNode = createHorizon()
+        showMeridiansAndParalels()
     }
-    
     func hideMeridiansAndParalels() {
         meridiansNode.removeFromParentNode()
         paralelsNode.removeFromParentNode()
@@ -35,22 +32,16 @@ final class CircleNode: SCNNode {
 }
 
 
-extension CircleNode {
-    fileprivate func createMainNode() -> SCNNode {
-        let main = SCNNode()
-        main.addChildNode(paralelsNode)
-        main.addChildNode(meridiansNode)
-        main.addChildNode(horizonNode)
-        return main
-    }
+extension CelestialCirclesNode {
     
     fileprivate func createParalels() -> SCNNode {
         let paralels = SCNNode()
         for i in -10 ..< 10 {
+            let paralelNode = SCNNode()
             let radius = CGFloat(9.90 * cos( CGFloat(i) * CGFloat(Double.pi) / 18))
             let geometry = SCNTorus(ringRadius: radius, pipeRadius: 0.01)
-            geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.1)
-            let paralelNode = SCNNode(geometry: geometry)
+            geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.3)
+            paralelNode.geometry = geometry
             let yPosition = Float(9.90 *  sin( CGFloat(i) * CGFloat(Double.pi) / 18))
             paralelNode.position = SCNVector3Make(0, yPosition, 0)
             paralels.addChildNode(paralelNode)
@@ -62,7 +53,7 @@ extension CircleNode {
         let meridians = SCNNode()
         for i in 0 ..< 25 {
             let geometry = SCNTorus(ringRadius: 9.90, pipeRadius: 0.01)
-            geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.1)
+            geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.3)
             let meridianNode = SCNNode(geometry: geometry)
             meridianNode.position = SCNVector3Make(0, 0, 0)
             
@@ -72,13 +63,5 @@ extension CircleNode {
             meridians.addChildNode(meridianNode)
         }
         return meridians
-    }
-    
-    fileprivate func createHorizon() -> SCNNode {
-        let geometry = SCNTorus(ringRadius: 9.90, pipeRadius: 0.01)
-        geometry.firstMaterial?.diffuse.contents = UIColor.blue
-        let horizonNode = SCNNode(geometry: geometry)
-        horizonNode.position = SCNVector3Make(0, 0, 0)
-        return horizonNode
     }
 }

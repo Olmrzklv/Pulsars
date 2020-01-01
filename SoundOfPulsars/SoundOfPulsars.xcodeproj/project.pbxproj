@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A3A0D6923AFDC3800C74E8C /* CameraNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6823AFDC3800C74E8C /* CameraNode.swift */; };
-		0A3A0D6B23AFDE5900C74E8C /* CircleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6A23AFDE5900C74E8C /* CircleNode.swift */; };
+		0A3A0D6B23AFDE5900C74E8C /* CelestialCirclesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6A23AFDE5900C74E8C /* CelestialCirclesNode.swift */; };
 		0A3A0D6D23AFE33E00C74E8C /* CelestialNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6C23AFE33E00C74E8C /* CelestialNode.swift */; };
 		0A3A0D6F23AFE77200C74E8C /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6E23AFE77200C74E8C /* TextNode.swift */; };
 		0A3A0D7123AFED3E00C74E8C /* PulsarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D7023AFED3E00C74E8C /* PulsarNode.swift */; };
@@ -24,6 +24,8 @@
 		0A992CAC23AF9D6A001F7B28 /* CelestialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CAB23AF9D6A001F7B28 /* CelestialScene.swift */; };
 		0A992CB023AFA0F5001F7B28 /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CAF23AFA0F5001F7B28 /* SphereNode.swift */; };
 		0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CB223AFA802001F7B28 /* UIImage.swift */; };
+		0AE9B9D923BCDB6B00AF7591 /* LightNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */; };
+		0AE9B9DD23BD12B000AF7591 /* HorizonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +75,7 @@
 
 /* Begin PBXFileReference section */
 		0A3A0D6823AFDC3800C74E8C /* CameraNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNode.swift; sourceTree = "<group>"; };
-		0A3A0D6A23AFDE5900C74E8C /* CircleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNode.swift; sourceTree = "<group>"; };
+		0A3A0D6A23AFDE5900C74E8C /* CelestialCirclesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialCirclesNode.swift; sourceTree = "<group>"; };
 		0A3A0D6C23AFE33E00C74E8C /* CelestialNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialNode.swift; sourceTree = "<group>"; };
 		0A3A0D6E23AFE77200C74E8C /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
 		0A3A0D7023AFED3E00C74E8C /* PulsarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarNode.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		0A992CAB23AF9D6A001F7B28 /* CelestialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialScene.swift; sourceTree = "<group>"; };
 		0A992CAF23AFA0F5001F7B28 /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
 		0A992CB223AFA802001F7B28 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNode.swift; sourceTree = "<group>"; };
+		0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,8 +201,8 @@
 		0A992CAD23AFA0D6001F7B28 /* CelestialSphere */ = {
 			isa = PBXGroup;
 			children = (
-				0A992CAE23AFA0E1001F7B28 /* Nodes */,
 				0A992CAB23AF9D6A001F7B28 /* CelestialScene.swift */,
+				0A992CAE23AFA0E1001F7B28 /* Nodes */,
 			);
 			path = CelestialSphere;
 			sourceTree = "<group>";
@@ -209,9 +213,11 @@
 				0A3A0D6C23AFE33E00C74E8C /* CelestialNode.swift */,
 				0A992CAF23AFA0F5001F7B28 /* SphereNode.swift */,
 				0A3A0D6823AFDC3800C74E8C /* CameraNode.swift */,
+				0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */,
 				0A3A0D7023AFED3E00C74E8C /* PulsarNode.swift */,
 				0A3A0D6E23AFE77200C74E8C /* TextNode.swift */,
-				0A3A0D6A23AFDE5900C74E8C /* CircleNode.swift */,
+				0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */,
+				0A3A0D6A23AFDE5900C74E8C /* CelestialCirclesNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -379,14 +385,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE9B9D923BCDB6B00AF7591 /* LightNode.swift in Sources */,
 				0A992C8023AF82E9001F7B28 /* PulsarViewController.swift in Sources */,
 				0A3A0D7123AFED3E00C74E8C /* PulsarNode.swift in Sources */,
 				0A3A0D6923AFDC3800C74E8C /* CameraNode.swift in Sources */,
 				0A992CB023AFA0F5001F7B28 /* SphereNode.swift in Sources */,
-				0A3A0D6B23AFDE5900C74E8C /* CircleNode.swift in Sources */,
+				0A3A0D6B23AFDE5900C74E8C /* CelestialCirclesNode.swift in Sources */,
 				0A992CAC23AF9D6A001F7B28 /* CelestialScene.swift in Sources */,
 				0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */,
 				0A3A0D6D23AFE33E00C74E8C /* CelestialNode.swift in Sources */,
+				0AE9B9DD23BD12B000AF7591 /* HorizonNode.swift in Sources */,
 				0A992C7C23AF82E9001F7B28 /* AppDelegate.swift in Sources */,
 				0A3A0D6F23AFE77200C74E8C /* TextNode.swift in Sources */,
 				0A992C7E23AF82E9001F7B28 /* SceneDelegate.swift in Sources */,

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3A0D6923AFDC3800C74E8C /* CameraNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6823AFDC3800C74E8C /* CameraNode.swift */; };
+		0A3A0D6B23AFDE5900C74E8C /* CircleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6A23AFDE5900C74E8C /* CircleNode.swift */; };
+		0A3A0D6D23AFE33E00C74E8C /* CelestialNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6C23AFE33E00C74E8C /* CelestialNode.swift */; };
+		0A3A0D6F23AFE77200C74E8C /* TextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D6E23AFE77200C74E8C /* TextNode.swift */; };
+		0A3A0D7123AFED3E00C74E8C /* PulsarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3A0D7023AFED3E00C74E8C /* PulsarNode.swift */; };
 		0A3A0D8623AFF11A00C74E8C /* PulsarDatasource.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0A3A0D8223AFF0C900C74E8C /* PulsarDatasource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0A992C7C23AF82E9001F7B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992C7B23AF82E9001F7B28 /* AppDelegate.swift */; };
 		0A992C7E23AF82E9001F7B28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992C7D23AF82E9001F7B28 /* SceneDelegate.swift */; };
@@ -16,6 +21,8 @@
 		0A992C8823AF82EA001F7B28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A992C8623AF82EA001F7B28 /* LaunchScreen.storyboard */; };
 		0A992C9323AF82EA001F7B28 /* SoundOfPulsarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992C9223AF82EA001F7B28 /* SoundOfPulsarsTests.swift */; };
 		0A992C9E23AF82EB001F7B28 /* SoundOfPulsarsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992C9D23AF82EB001F7B28 /* SoundOfPulsarsUITests.swift */; };
+		0A992CAC23AF9D6A001F7B28 /* CelestialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CAB23AF9D6A001F7B28 /* CelestialScene.swift */; };
+		0A992CB023AFA0F5001F7B28 /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CAF23AFA0F5001F7B28 /* SphereNode.swift */; };
 		0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CB223AFA802001F7B28 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A3A0D6823AFDC3800C74E8C /* CameraNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNode.swift; sourceTree = "<group>"; };
+		0A3A0D6A23AFDE5900C74E8C /* CircleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNode.swift; sourceTree = "<group>"; };
+		0A3A0D6C23AFE33E00C74E8C /* CelestialNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialNode.swift; sourceTree = "<group>"; };
+		0A3A0D6E23AFE77200C74E8C /* TextNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNode.swift; sourceTree = "<group>"; };
+		0A3A0D7023AFED3E00C74E8C /* PulsarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsarNode.swift; sourceTree = "<group>"; };
 		0A3A0D7C23AFF0C900C74E8C /* PulsarDatasource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PulsarDatasource.xcodeproj; path = ../PulsarDatasource/PulsarDatasource.xcodeproj; sourceTree = "<group>"; };
 		0A992C7823AF82E9001F7B28 /* SoundOfPulsars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundOfPulsars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A992C7B23AF82E9001F7B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +92,8 @@
 		0A992C9923AF82EB001F7B28 /* SoundOfPulsarsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundOfPulsarsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A992C9D23AF82EB001F7B28 /* SoundOfPulsarsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundOfPulsarsUITests.swift; sourceTree = "<group>"; };
 		0A992C9F23AF82EB001F7B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A992CAB23AF9D6A001F7B28 /* CelestialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelestialScene.swift; sourceTree = "<group>"; };
+		0A992CAF23AFA0F5001F7B28 /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
 		0A992CB223AFA802001F7B28 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				0A992CB123AFA7F5001F7B28 /* Extensions */,
+				0A992CAD23AFA0D6001F7B28 /* CelestialSphere */,
 				0A992C7B23AF82E9001F7B28 /* AppDelegate.swift */,
 				0A992C7D23AF82E9001F7B28 /* SceneDelegate.swift */,
 				0A992C7F23AF82E9001F7B28 /* PulsarViewController.swift */,
@@ -177,6 +192,28 @@
 				0A992C9F23AF82EB001F7B28 /* Info.plist */,
 			);
 			path = SoundOfPulsarsUITests;
+			sourceTree = "<group>";
+		};
+		0A992CAD23AFA0D6001F7B28 /* CelestialSphere */ = {
+			isa = PBXGroup;
+			children = (
+				0A992CAE23AFA0E1001F7B28 /* Nodes */,
+				0A992CAB23AF9D6A001F7B28 /* CelestialScene.swift */,
+			);
+			path = CelestialSphere;
+			sourceTree = "<group>";
+		};
+		0A992CAE23AFA0E1001F7B28 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				0A3A0D6C23AFE33E00C74E8C /* CelestialNode.swift */,
+				0A992CAF23AFA0F5001F7B28 /* SphereNode.swift */,
+				0A3A0D6823AFDC3800C74E8C /* CameraNode.swift */,
+				0A3A0D7023AFED3E00C74E8C /* PulsarNode.swift */,
+				0A3A0D6E23AFE77200C74E8C /* TextNode.swift */,
+				0A3A0D6A23AFDE5900C74E8C /* CircleNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		0A992CB123AFA7F5001F7B28 /* Extensions */ = {
@@ -343,8 +380,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A992C8023AF82E9001F7B28 /* PulsarViewController.swift in Sources */,
+				0A3A0D7123AFED3E00C74E8C /* PulsarNode.swift in Sources */,
+				0A3A0D6923AFDC3800C74E8C /* CameraNode.swift in Sources */,
+				0A992CB023AFA0F5001F7B28 /* SphereNode.swift in Sources */,
+				0A3A0D6B23AFDE5900C74E8C /* CircleNode.swift in Sources */,
+				0A992CAC23AF9D6A001F7B28 /* CelestialScene.swift in Sources */,
 				0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */,
+				0A3A0D6D23AFE33E00C74E8C /* CelestialNode.swift in Sources */,
 				0A992C7C23AF82E9001F7B28 /* AppDelegate.swift in Sources */,
+				0A3A0D6F23AFE77200C74E8C /* TextNode.swift in Sources */,
 				0A992C7E23AF82E9001F7B28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

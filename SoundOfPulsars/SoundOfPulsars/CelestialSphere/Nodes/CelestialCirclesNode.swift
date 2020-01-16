@@ -36,7 +36,7 @@ extension CelestialCirclesNode {
     
     fileprivate func createParalels() -> SCNNode {
         let paralels = SCNNode()
-        for i in -10 ..< 10 {
+        for i in -9 ..< 10 {
             let paralelNode = SCNNode()
             let radius = CGFloat(9.90 * cos( CGFloat(i) * CGFloat(Double.pi) / 18))
             let geometry = SCNTorus(ringRadius: radius, pipeRadius: 0.01)
@@ -51,7 +51,7 @@ extension CelestialCirclesNode {
     
     fileprivate func createMeridians() -> SCNNode {
         let meridians = SCNNode()
-        for i in 0 ..< 25 {
+        for i in 0 ..< 24 {
             let geometry = SCNTorus(ringRadius: 9.90, pipeRadius: 0.01)
             geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.3)
             let meridianNode = SCNNode(geometry: geometry)

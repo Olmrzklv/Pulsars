@@ -10,6 +10,11 @@
 		DCC1769323D0F042009CC096 /* CameraNavigator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC1768923D0F042009CC096 /* CameraNavigator.framework */; };
 		DCC1769823D0F042009CC096 /* CameraNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1769723D0F042009CC096 /* CameraNavigatorTests.swift */; };
 		DCC1769A23D0F042009CC096 /* CameraNavigator.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1768C23D0F042009CC096 /* CameraNavigator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCC176A423D31C9B009CC096 /* CameraNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176A323D31C9B009CC096 /* CameraNavigator.swift */; };
+		DCC176A723D31D64009CC096 /* GestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176A623D31D64009CC096 /* GestureController.swift */; };
+		DCC176A923D31DD1009CC096 /* PanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176A823D31DD1009CC096 /* PanController.swift */; };
+		DCC176AB23D31DE3009CC096 /* PinchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176AA23D31DE3009CC096 /* PinchController.swift */; };
+		DCC176AD23D31DF7009CC096 /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176AC23D31DF7009CC096 /* RotationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		DCC1769223D0F042009CC096 /* CameraNavigatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameraNavigatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1769723D0F042009CC096 /* CameraNavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigatorTests.swift; sourceTree = "<group>"; };
 		DCC1769923D0F042009CC096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC176A323D31C9B009CC096 /* CameraNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigator.swift; sourceTree = "<group>"; };
+		DCC176A623D31D64009CC096 /* GestureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureController.swift; sourceTree = "<group>"; };
+		DCC176A823D31DD1009CC096 /* PanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanController.swift; sourceTree = "<group>"; };
+		DCC176AA23D31DE3009CC096 /* PinchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchController.swift; sourceTree = "<group>"; };
+		DCC176AC23D31DF7009CC096 /* RotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +81,10 @@
 		DCC1768B23D0F042009CC096 /* CameraNavigator */ = {
 			isa = PBXGroup;
 			children = (
+				DCC176A523D31D28009CC096 /* GestureController */,
 				DCC1768C23D0F042009CC096 /* CameraNavigator.h */,
 				DCC1768D23D0F042009CC096 /* Info.plist */,
+				DCC176A323D31C9B009CC096 /* CameraNavigator.swift */,
 			);
 			path = CameraNavigator;
 			sourceTree = "<group>";
@@ -84,6 +96,17 @@
 				DCC1769923D0F042009CC096 /* Info.plist */,
 			);
 			path = CameraNavigatorTests;
+			sourceTree = "<group>";
+		};
+		DCC176A523D31D28009CC096 /* GestureController */ = {
+			isa = PBXGroup;
+			children = (
+				DCC176A623D31D64009CC096 /* GestureController.swift */,
+				DCC176A823D31DD1009CC096 /* PanController.swift */,
+				DCC176AA23D31DE3009CC096 /* PinchController.swift */,
+				DCC176AC23D31DF7009CC096 /* RotationController.swift */,
+			);
+			path = GestureController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					DCC1768823D0F042009CC096 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					DCC1769123D0F042009CC096 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC176AD23D31DF7009CC096 /* RotationController.swift in Sources */,
+				DCC176A423D31C9B009CC096 /* CameraNavigator.swift in Sources */,
+				DCC176A923D31DD1009CC096 /* PanController.swift in Sources */,
+				DCC176AB23D31DE3009CC096 /* PinchController.swift in Sources */,
+				DCC176A723D31D64009CC096 /* GestureController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +370,7 @@
 		DCC1769E23D0F042009CC096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = onur.ornek17.CameraNavigator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +396,7 @@
 		DCC1769F23D0F042009CC096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +421,7 @@
 		DCC176A123D0F042009CC096 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CameraNavigatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +439,7 @@
 		DCC176A223D0F042009CC096 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CameraNavigatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

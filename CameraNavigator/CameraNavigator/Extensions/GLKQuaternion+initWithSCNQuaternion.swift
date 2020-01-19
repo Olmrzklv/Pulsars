@@ -1,5 +1,5 @@
 //
-//  GLKQuaternion_initWithSCNQuaternion.swift
+//  GLKQuaternion+initWithSCNQuaternion.swift
 //  CameraNavigator
 //
 //  Created by Onur Ornek on 1/19/20.

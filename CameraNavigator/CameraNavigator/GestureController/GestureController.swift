@@ -14,6 +14,10 @@ class GestureController {
     let pinchController = PinchController()
     let rotationController = RotationController()
     
+    init(with view: UIView) {
+        setView(to: view)
+    }
+    
     var enabled = false {
         didSet {
             panController.enabled = enabled

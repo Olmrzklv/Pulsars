@@ -15,6 +15,8 @@
 		DCC176A923D31DD1009CC096 /* PanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176A823D31DD1009CC096 /* PanController.swift */; };
 		DCC176AB23D31DE3009CC096 /* PinchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176AA23D31DE3009CC096 /* PinchController.swift */; };
 		DCC176AD23D31DF7009CC096 /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176AC23D31DF7009CC096 /* RotationController.swift */; };
+		DCC176B023D4931B009CC096 /* GLKQuaternion_initWithSCNQuaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176AF23D4931B009CC096 /* GLKQuaternion_initWithSCNQuaternion.swift */; };
+		DCC176B223D4933E009CC096 /* SCNQuaternion_initWithGLKQuaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176B123D4933E009CC096 /* SCNQuaternion_initWithGLKQuaternion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		DCC176A823D31DD1009CC096 /* PanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanController.swift; sourceTree = "<group>"; };
 		DCC176AA23D31DE3009CC096 /* PinchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchController.swift; sourceTree = "<group>"; };
 		DCC176AC23D31DF7009CC096 /* RotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
+		DCC176AF23D4931B009CC096 /* GLKQuaternion_initWithSCNQuaternion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLKQuaternion_initWithSCNQuaternion.swift; sourceTree = "<group>"; };
+		DCC176B123D4933E009CC096 /* SCNQuaternion_initWithGLKQuaternion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNQuaternion_initWithGLKQuaternion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		DCC1768B23D0F042009CC096 /* CameraNavigator */ = {
 			isa = PBXGroup;
 			children = (
+				DCC176AE23D492B3009CC096 /* Extensions */,
 				DCC176A523D31D28009CC096 /* GestureController */,
 				DCC1768C23D0F042009CC096 /* CameraNavigator.h */,
 				DCC1768D23D0F042009CC096 /* Info.plist */,
@@ -107,6 +112,15 @@
 				DCC176AC23D31DF7009CC096 /* RotationController.swift */,
 			);
 			path = GestureController;
+			sourceTree = "<group>";
+		};
+		DCC176AE23D492B3009CC096 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DCC176AF23D4931B009CC096 /* GLKQuaternion_initWithSCNQuaternion.swift */,
+				DCC176B123D4933E009CC096 /* SCNQuaternion_initWithGLKQuaternion.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,10 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC176AD23D31DF7009CC096 /* RotationController.swift in Sources */,
+				DCC176B023D4931B009CC096 /* GLKQuaternion_initWithSCNQuaternion.swift in Sources */,
 				DCC176A423D31C9B009CC096 /* CameraNavigator.swift in Sources */,
 				DCC176A923D31DD1009CC096 /* PanController.swift in Sources */,
 				DCC176AB23D31DE3009CC096 /* PinchController.swift in Sources */,
 				DCC176A723D31D64009CC096 /* GestureController.swift in Sources */,
+				DCC176B223D4933E009CC096 /* SCNQuaternion_initWithGLKQuaternion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

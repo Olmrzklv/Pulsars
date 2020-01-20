@@ -5,6 +5,9 @@
       location = "container:SoundOfPulsars/SoundOfPulsars.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:CameraNavigator/CameraNavigator.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PulsarDatasource/PulsarDatasource.xcodeproj">
    </FileRef>
 </Workspace>

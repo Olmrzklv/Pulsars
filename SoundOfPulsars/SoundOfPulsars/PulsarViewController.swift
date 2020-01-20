@@ -8,10 +8,16 @@
 
 import UIKit
 import SceneKit
+import CameraNavigator
 
 class PulsarViewController: UIViewController {
 
     @IBOutlet weak var sceneView: SCNView!
+    private let cameraNode = CelestialNode.Camera
+    private let sphereNode = CelestialNode.Sphere
+    private let circlesNode = CelestialNode.CelestialCircles
+    private lazy var zoomAmount:CGFloat = 60.0
+    private var orientation = SCNQuaternion(0, 0, 0, 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +25,39 @@ class PulsarViewController: UIViewController {
     }
 
     func setupUI() {
-        let celestialScene = CelestialScene(sphere:CelestialNode.Sphere,
-                                            camera: CelestialNode.Camera,
-                                            circles: CelestialNode.CelestialCircles)
+        let celestialScene = CelestialScene(sphere: sphereNode,
+                                            camera: cameraNode,
+                                            circles: circlesNode)
 
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
         sceneView.backgroundColor = .black
         sceneView.scene = celestialScene
         sceneView.pointOfView = celestialScene.cameraNode
+        
+        guard let fOV = cameraNode.camera?.fieldOfView else { return }
+        let cameraNavigator = CameraNavigator(with: self.view,
+                                              initialOrientation: orientation,
+                                              verticalFieldOfView: fOV)
+        cameraNavigator.delegate = self
+        cameraNavigator.setModeToGesture()
     }
 
 }
 
 extension PulsarViewController: SCNSceneRendererDelegate {
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+    }
+}
+
+extension PulsarViewController: CameraNavigatorDelegate {
+    func didUpdateOrientation(to orientation: SCNQuaternion) {
+        cameraNode.orientation = orientation
+    }
+    
+    func didUpdateVerticalFieldOfView(to vfov: CGFloat) {
+        cameraNode.camera?.fieldOfView = vfov
+    }
+    
     
 }

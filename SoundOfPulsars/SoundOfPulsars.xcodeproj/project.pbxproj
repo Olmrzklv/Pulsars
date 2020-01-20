@@ -26,6 +26,7 @@
 		0A992CB323AFA802001F7B28 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A992CB223AFA802001F7B28 /* UIImage.swift */; };
 		0AE9B9D923BCDB6B00AF7591 /* LightNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */; };
 		0AE9B9DD23BD12B000AF7591 /* HorizonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */; };
+		0AFDEADE23D6361E008AEA63 /* CameraNavigator.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFDEAD923D635CD008AEA63 /* CameraNavigator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,20 @@
 			remoteGlobalIDString = 0A992C7723AF82E9001F7B28;
 			remoteInfo = SoundOfPulsars;
 		};
+		0AFDEAD823D635CD008AEA63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFDEAD323D635CD008AEA63 /* CameraNavigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCC1768923D0F042009CC096;
+			remoteInfo = CameraNavigator;
+		};
+		0AFDEADA23D635CD008AEA63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AFDEAD323D635CD008AEA63 /* CameraNavigator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCC1769223D0F042009CC096;
+			remoteInfo = CameraNavigatorTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +82,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0A3A0D8623AFF11A00C74E8C /* PulsarDatasource.framework in Copy Frameworks */,
+				0AFDEADE23D6361E008AEA63 /* CameraNavigator.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +115,7 @@
 		0A992CB223AFA802001F7B28 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNode.swift; sourceTree = "<group>"; };
 		0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonNode.swift; sourceTree = "<group>"; };
+		0AFDEAD323D635CD008AEA63 /* CameraNavigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CameraNavigator.xcodeproj; path = ../CameraNavigator/CameraNavigator.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +146,7 @@
 		0A3A0D7223AFEFD400C74E8C /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				0AFDEAD323D635CD008AEA63 /* CameraNavigator.xcodeproj */,
 				0A3A0D7C23AFF0C900C74E8C /* PulsarDatasource.xcodeproj */,
 			);
 			name = Dependencies;
@@ -230,6 +248,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0AFDEAD423D635CD008AEA63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AFDEAD923D635CD008AEA63 /* CameraNavigator.framework */,
+				0AFDEADB23D635CD008AEA63 /* CameraNavigatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,6 +350,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 0AFDEAD423D635CD008AEA63 /* Products */;
+					ProjectRef = 0AFDEAD323D635CD008AEA63 /* CameraNavigator.xcodeproj */;
+				},
+				{
 					ProductGroup = 0A3A0D7D23AFF0C900C74E8C /* Products */;
 					ProjectRef = 0A3A0D7C23AFF0C900C74E8C /* PulsarDatasource.xcodeproj */;
 				},
@@ -349,6 +380,20 @@
 			fileType = wrapper.cfbundle;
 			path = PulsarDatasourceTests.xctest;
 			remoteRef = 0A3A0D8323AFF0C900C74E8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AFDEAD923D635CD008AEA63 /* CameraNavigator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CameraNavigator.framework;
+			remoteRef = 0AFDEAD823D635CD008AEA63 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0AFDEADB23D635CD008AEA63 /* CameraNavigatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CameraNavigatorTests.xctest;
+			remoteRef = 0AFDEADA23D635CD008AEA63 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

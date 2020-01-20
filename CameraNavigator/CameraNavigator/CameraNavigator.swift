@@ -23,7 +23,7 @@ public protocol CameraNavigatorDelegate {
     - zoom factor is expressed in terms of vertical field of view,
  which represents the angle of sight (in degrees) between the bottom
  and the top of a view. */
-class CameraNavigator {
+public class CameraNavigator {
     let gestureController: GestureController
     let viewSize: CGSize
     var verticalFieldOfView: CGFloat {
@@ -48,7 +48,7 @@ class CameraNavigator {
             }
         }
     }
-    var delegate: CameraNavigatorDelegate?
+    public var delegate: CameraNavigatorDelegate?
     var anglePerDistance: CGFloat {
         get {
             return verticalFieldOfViewInRadian / viewSize.height
@@ -58,7 +58,7 @@ class CameraNavigator {
     fileprivate static let maxFieldOfViewInRadian = CGFloat(2)
     fileprivate static let minFieldOfViewInRadian = CGFloat(0.1)
     
-    init(with view: UIView, initialOrientation: SCNQuaternion, verticalFieldOfView: CGFloat) {
+    public init(with view: UIView, initialOrientation: SCNQuaternion, verticalFieldOfView: CGFloat) {
         gestureController = GestureController(with: view)
         viewSize = view.bounds.size
         orientation = GLKQuaternion(initialOrientation)
@@ -68,13 +68,13 @@ class CameraNavigator {
     
     /** To be called to use pan and rotation gestures to navigate the orientation.
         Zoom is always controlled by the pinch gesture. */
-    func setModeToGesture() {
+    public func setModeToGesture() {
         gestureController.enabled = true
     }
     
     /** To be called to use device motion to navigate the orientation.
         Zoom is always controlled by the pinch gesture. */
-    func setModeToDeviceMotion(with initialOrientation: SCNQuaternion) {
+    public func setModeToDeviceMotion(with initialOrientation: SCNQuaternion) {
         gestureController.enabled = false
         orientation = GLKQuaternion(initialOrientation)
     }
@@ -82,18 +82,18 @@ class CameraNavigator {
 
 extension CameraNavigator: GestureDelegate {
     func didPan(by vector: CGVector) {
-        let horizontalAngle = Float(vector.dx * anglePerDistance) * (-1.0)
-        let verticalAngle = Float(vector.dy * anglePerDistance) * (-1.0)
+        let horizontalAngle = Float(vector.dx * anglePerDistance)
+        let verticalAngle = Float(vector.dy * anglePerDistance)
         let horizontalRotation = GLKQuaternionMakeWithAngleAndAxis(horizontalAngle, 0, 1, 0)
         let verticalRotation = GLKQuaternionMakeWithAngleAndAxis(verticalAngle, 1, 0, 0)
         let totalRotation = GLKQuaternionMultiply(horizontalRotation, verticalRotation)
-        orientation = GLKQuaternionMultiply(totalRotation, orientation)
+        orientation = GLKQuaternionMultiply(orientation, totalRotation)
     }
     
     func didRotate(by angle: CGFloat) {
-        let rotationAngle = Float(angle) * (-1.0)
+        let rotationAngle = Float(angle)
         let rotation = GLKQuaternionMakeWithAngleAndAxis(rotationAngle, 0, 0, 1)
-        orientation = GLKQuaternionMultiply(rotation, orientation)
+        orientation = GLKQuaternionMultiply(orientation, rotation)
     }
     
     func didScale(by ratio: CGFloat) {

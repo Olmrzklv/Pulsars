@@ -10,15 +10,22 @@ import SceneKit
 
 ///Describes Parallels, The Equator, Meridians, and Horizon Nodes
 final class CelestialCirclesNode: SCNNode {
+    static let shared = CelestialCirclesNode()
     
     private var paralelsNode: SCNNode!
     private var meridiansNode: SCNNode!
     
-    func createCelestialCirclesNode() {
+    private override init() {
+        super.init()
         paralelsNode = createParalels()
         meridiansNode = createMeridians()
         showMeridiansAndParalels()
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func hideMeridiansAndParalels() {
         meridiansNode.removeFromParentNode()
         paralelsNode.removeFromParentNode()
@@ -34,13 +41,14 @@ final class CelestialCirclesNode: SCNNode {
 
 extension CelestialCirclesNode {
     
-    fileprivate func createParalels() -> SCNNode {
+    private func createParalels() -> SCNNode {
         let paralels = SCNNode()
         for i in -9 ..< 10 {
             let paralelNode = SCNNode()
             let radius = CGFloat(9.90 * cos( CGFloat(i) * CGFloat(Double.pi) / 18))
             let geometry = SCNTorus(ringRadius: radius, pipeRadius: 0.01)
-            geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.3)
+            let alpha: CGFloat = (i == 0) ? 1.0 : 0.25
+            geometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(alpha)
             paralelNode.geometry = geometry
             let yPosition = Float(9.90 *  sin( CGFloat(i) * CGFloat(Double.pi) / 18))
             paralelNode.position = SCNVector3Make(0, yPosition, 0)
@@ -49,7 +57,7 @@ extension CelestialCirclesNode {
         return paralels
     }
     
-    fileprivate func createMeridians() -> SCNNode {
+    private func createMeridians() -> SCNNode {
         let meridians = SCNNode()
         for i in 0 ..< 24 {
             let geometry = SCNTorus(ringRadius: 9.90, pipeRadius: 0.01)

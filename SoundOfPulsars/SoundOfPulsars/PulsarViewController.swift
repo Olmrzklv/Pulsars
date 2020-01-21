@@ -15,7 +15,6 @@ class PulsarViewController: UIViewController {
     @IBOutlet weak var sceneView: SCNView!
     private let cameraNode = CelestialNode.Camera
     private let sphereNode = CelestialNode.Sphere
-    private let circlesNode = CelestialNode.CelestialCircles
     private lazy var zoomAmount:CGFloat = 60.0
     private var orientation = SCNQuaternion(0, 0, 0, 1)
     
@@ -26,8 +25,7 @@ class PulsarViewController: UIViewController {
 
     func setupUI() {
         let celestialScene = CelestialScene(sphere: sphereNode,
-                                            camera: cameraNode,
-                                            circles: circlesNode)
+                                            camera: cameraNode)
 
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true

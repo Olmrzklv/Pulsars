@@ -10,7 +10,7 @@ import SceneKit
 
 enum CelestialNode {
     static var Sphere: SCNNode {
-        return SphereNode.createCelestialSphereNode()
+        return SphereNode.shared
     }
     
     static var Camera: SCNNode {
@@ -25,9 +25,4 @@ enum CelestialNode {
         return HorizonNode.createHorizonNode()
     }
     
-    static var CelestialCircles: CelestialCirclesNode {
-        let circlesNode = CelestialCirclesNode()
-        circlesNode.createCelestialCirclesNode()
-        return circlesNode
-    }
 }

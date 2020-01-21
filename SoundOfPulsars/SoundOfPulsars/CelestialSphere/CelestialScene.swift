@@ -26,14 +26,12 @@ final class CelestialScene: SCNScene {
     
     var cameraNode: SCNNode!
     var sphereNode: SCNNode!
-    var circleNode: SCNNode!
         
-    convenience init(sphere: SCNNode, camera: SCNNode, circles: SCNNode) {
+    convenience init(sphere: SCNNode, camera: SCNNode) {
         self.init()
         
         self.cameraNode = camera
         self.sphereNode = sphere
-        self.circleNode = circles
         
         self.setupNodes()
     }
@@ -43,7 +41,6 @@ final class CelestialScene: SCNScene {
         self.rootNode.addChildNode(cameraNode)
         self.rootNode.addChildNode(CelestialNode.Light)
         self.rootNode.addChildNode(CelestialNode.Horizon)
-        self.sphereNode.addChildNode(circleNode)
     }
     
     

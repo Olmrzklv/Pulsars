@@ -12,25 +12,25 @@ import PulsarDatasource
 final class TextNode: SCNNode {
     
     convenience init(with pulsar: Pulsar) {
+        self.init()
         let pulsarName = SCNText(string: pulsar.name, extrusionDepth: 0.0001)
         pulsarName.font = UIFont(name: "Helvetica", size: 0.003)
-        pulsarName.firstMaterial?.diffuse.contents = UIColor.white
-        pulsarName.firstMaterial?.isDoubleSided = true
+        geometry = pulsarName
+        geometry?.firstMaterial?.diffuse.contents = UIColor.white
+        geometry?.firstMaterial?.isDoubleSided = true
         
-        let textNode = SCNNode(geometry: pulsarName)
-        textNode.scale = SCNVector3Make(0.01, 0.01, 0.01)
-        textNode.position = SCNVector3Make(pulsar.x*0.9, pulsar.y*0.9, pulsar.z*0.9)
+        scale = SCNVector3Make(0.01, 0.01, 0.01)
+        position = SCNVector3Make(pulsar.x*0.9, pulsar.y*0.9, pulsar.z*0.9)
         
         self.init()
     }
     
-}
-
-// TO BE DELETED after PULSAR DATASOURCE
-class Pulsar {
-    var name: String = ""
-    var x: Float = 0.0
-    var y: Float = 0.0
-    var z: Float = 0.0
-    var color = UIColor.white
+    private override init() {
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

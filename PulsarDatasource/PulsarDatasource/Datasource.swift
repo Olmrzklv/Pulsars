@@ -15,7 +15,7 @@ protocol PulsarDatasource {
 
 extension PulsarDatasource {
     ///Returns pulsars within given range. 
-    static func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar] {
+    public static func pulsarWithFrequencyRange(min:Double, max:Double) -> [Pulsar] {
         var audibles:[Pulsar] = []
         for pulsarData in pulsars {
             if min<pulsarData.frequency  && pulsarData.frequency<max {
@@ -30,7 +30,7 @@ extension PulsarDatasource {
 public struct Datasource: PulsarDatasource {
     
     /// Range of audible frequencies for humans is 20 to 20,000 Hz.
-    static var audiblePulsars:[Pulsar] {
+    public static var audiblePulsars:[Pulsar] {
         return pulsarWithFrequencyRange(min:20, max:20000)
     }
     

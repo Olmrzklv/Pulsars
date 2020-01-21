@@ -13,14 +13,15 @@ public class Pulsar {
     private static let R: Float = 9.80
     private var RAJ: String!
     private var DECJ: String
-    var name: String!
-    var frequency: Double!
-    var x: Float!
-    var y: Float!
-    var z: Float!
-    var color: UIColor!
     
-    init(name: String, RAJ: String, DECJ: String, frequency: Double) {
+    public var name: String!
+    public var frequency: Double!
+    public var x: Float!
+    public var y: Float!
+    public var z: Float!
+    public var color: UIColor!
+    
+    public init(name: String, RAJ: String, DECJ: String, frequency: Double) {
         self.name = name
         self.RAJ = RAJ
         self.DECJ = DECJ

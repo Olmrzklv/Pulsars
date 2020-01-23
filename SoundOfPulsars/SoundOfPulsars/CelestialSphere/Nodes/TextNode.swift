@@ -13,16 +13,15 @@ final class TextNode: SCNNode {
     
     convenience init(with pulsar: Pulsar) {
         self.init()
+        
         let pulsarName = SCNText(string: pulsar.name, extrusionDepth: 0.0001)
-        pulsarName.font = UIFont(name: "Helvetica", size: 0.003)
+        pulsarName.font = UIFont(name: "Helvetica", size: 12)
         geometry = pulsarName
         geometry?.firstMaterial?.diffuse.contents = UIColor.white
         geometry?.firstMaterial?.isDoubleSided = true
         
         scale = SCNVector3Make(0.01, 0.01, 0.01)
         position = SCNVector3Make(pulsar.x*0.9, pulsar.y*0.9, pulsar.z*0.9)
-        
-        self.init()
     }
     
     private override init() {

@@ -45,6 +45,9 @@ class PulsarViewController: UIViewController {
 
 extension PulsarViewController: SCNSceneRendererDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        sphereNode.textsNode.childNodes.forEach {
+            $0.orientation = cameraNode.orientation
+        }
     }
 }
 

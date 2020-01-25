@@ -25,9 +25,9 @@ import SceneKit
 final class CelestialScene: SCNScene {
     
     var cameraNode: SCNNode!
-    var sphereNode: SCNNode!
+    var sphereNode: SphereNode!
         
-    convenience init(sphere: SCNNode, camera: SCNNode) {
+    convenience init(sphere: SphereNode, camera: SCNNode) {
         self.init()
         
         self.cameraNode = camera

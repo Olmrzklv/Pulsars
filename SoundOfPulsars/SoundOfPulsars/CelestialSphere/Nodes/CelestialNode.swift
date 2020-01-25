@@ -9,7 +9,7 @@
 import SceneKit
 
 enum CelestialNode {
-    static var Sphere: SCNNode {
+    static var Sphere: SphereNode {
         return SphereNode.shared
     }
     

@@ -12,7 +12,6 @@ import PulsarDatasource
 final class SphereNode: SCNNode {
     
     static let shared:SphereNode = SphereNode()
-    
     let pulsarsNode = SCNNode()
     let textsNode   = SCNNode()
     let paralelsAndMeridiansNode = CelestialCirclesNode.shared

@@ -21,6 +21,16 @@ public class Pulsar {
     public var z: Float!
     public var color: UIColor!
     
+    ///Spherical coordinates computed from cartesian coordinates.
+    public var theta: Float {
+        return asin(y / Pulsar.R)
+    }
+    
+    ///Spherical coordinates computed from cartesian coordinates.
+    public var phi: Float {
+        return atan2(-z, -x)
+    }
+    
     public init(name: String, RAJ: String, DECJ: String, frequency: Double) {
         self.name = name
         self.RAJ = RAJ

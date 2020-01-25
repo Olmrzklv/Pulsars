@@ -11,14 +11,19 @@ import PulsarDatasource
 
 final class PulsarNode: SCNNode {
     
+    private var pulsar: Pulsar!
+    private var glowNode = SCNNode()
+    
     convenience init(with pulsar: Pulsar) {
         self.init()
-
+        
+        self.pulsar = pulsar
         geometry = SCNSphere(radius: 0.05)
         geometry?.firstMaterial?.diffuse.contents = pulsar.color
         geometry?.firstMaterial?.isDoubleSided = true
         position = SCNVector3Make(pulsar.x, pulsar.y, pulsar.z)
         
+        setupGlowNode()
     }
     
     private override init() {
@@ -27,5 +32,29 @@ final class PulsarNode: SCNNode {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupGlowNode() {
+        glowNode.geometry = SCNSphere(radius: 0.05)
+        glowNode.geometry?.firstMaterial?.diffuse.contents = pulsar.color.withAlphaComponent(0.2)
+        glowNode.geometry?.firstMaterial?.isDoubleSided = true
+        glowNode.position = SCNVector3Make(0, 0, 0)
+        self.addChildNode(glowNode)
+
+        let animation = CABasicAnimation(keyPath: "geometry.radius")
+        animation.fromValue = 0.03
+        animation.toValue = 0.5
+        animation.duration = 0.2
+        animation.autoreverses = true
+        animation.repeatCount = .infinity
+        glowNode.addAnimation(animation, forKey: "radius")
+    }
+    
+    func addGlow() {
+        addChildNode(glowNode)
+    }
+    
+    func removeGlow() {
+        glowNode.removeFromParentNode()
     }
 }

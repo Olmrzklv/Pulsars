@@ -48,6 +48,16 @@ extension PulsarViewController: SCNSceneRendererDelegate {
         sphereNode.textsNode.childNodes.forEach {
             $0.orientation = cameraNode.orientation
         }
+        guard let pointOfView = sceneView.pointOfView else { return }
+        sphereNode.pulsarsNode.childNodes.forEach {
+            guard let pulsarNode = $0 as? PulsarNode else {return}
+            if  sceneView.isNode($0, insideFrustumOf: pointOfView) {
+                pulsarNode.addGlow()
+            }else {
+                pulsarNode.removeGlow()
+            }
+
+        }
     }
 }
 

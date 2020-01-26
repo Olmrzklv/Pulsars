@@ -52,13 +52,13 @@ public class CameraNavigator {
     private var attitudeToOrientationConverter: GLKQuaternion?
     var deviceAttitude: GLKQuaternion? {
         didSet {
-            if let attitude = deviceAttitude {
-                if let converter = attitudeToOrientationConverter {
+            if let attitude = deviceAttitude, let converter = attitudeToOrientationConverter {
                     orientation = GLKQuaternionMultiply(converter, attitude)
-                }
             }
         }
     }
+    
+    var initialOrientation: GLKQuaternion?
     
     public var delegate: CameraNavigatorDelegate?
     var anglePerDistance: CGFloat {
@@ -76,6 +76,7 @@ public class CameraNavigator {
         orientation = GLKQuaternion(initialOrientation)
         self.verticalFieldOfView = verticalFieldOfView
         gestureController.delegate = self
+        deviceMotionController.delegate = self
     }
     
     /** To be called to use pan and rotation gestures to navigate the orientation.
@@ -85,16 +86,15 @@ public class CameraNavigator {
         deviceMotionController.enabled = false
         deviceAttitude = nil
         attitudeToOrientationConverter = nil
+        initialOrientation = nil
     }
     
     /** To be called to use device motion to navigate the orientation.
         Zoom is always controlled by the pinch gesture. */
     public func setModeToDeviceMotion(with initialOrientation: SCNQuaternion) {
+        self.initialOrientation = GLKQuaternion(initialOrientation)
         deviceMotionController.enabled = true
         gestureController.enabled = false
-        while deviceAttitude == nil {}
-        let initialAttitude: GLKQuaternion = self.deviceAttitude!
-        attitudeToOrientationConverter = GLKQuaternionMultiply(GLKQuaternion(initialOrientation), GLKQuaternionInvert(initialAttitude))
     }
 }
 
@@ -128,6 +128,9 @@ extension CameraNavigator: GestureDelegate {
 
 extension CameraNavigator: DevicoMotionDelegate {
     func didUpdateAttitude(to quaternion: GLKQuaternion) {
+        if (deviceAttitude == nil), let orientation = initialOrientation {
+            attitudeToOrientationConverter = GLKQuaternionMultiply(orientation, GLKQuaternionInvert(quaternion))
+        }
         deviceAttitude = quaternion
     }
 }

@@ -34,6 +34,9 @@ final class PulsarNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
 
+}
+
+extension PulsarNode {
     private func setupGlowNode() {
         glowNode.geometry = SCNSphere(radius: 0.05)
         glowNode.geometry?.firstMaterial?.diffuse.contents = pulsar.color.withAlphaComponent(0.2)

@@ -23,8 +23,9 @@ public protocol CameraNavigatorDelegate {
     - zoom factor is expressed in terms of vertical field of view,
  which represents the angle of sight (in degrees) between the bottom
  and the top of a view. */
-class CameraNavigator {
+public class CameraNavigator {
     let gestureController: GestureController
+    let deviceMotionController = DeviceMotionController()
     let viewSize: CGSize
     var verticalFieldOfView: CGFloat {
         didSet {
@@ -48,7 +49,18 @@ class CameraNavigator {
             }
         }
     }
-    var delegate: CameraNavigatorDelegate?
+    private var attitudeToOrientationConverter: GLKQuaternion?
+    var deviceAttitude: GLKQuaternion? {
+        didSet {
+            if let attitude = deviceAttitude {
+                if let converter = attitudeToOrientationConverter {
+                    orientation = GLKQuaternionMultiply(converter, attitude)
+                }
+            }
+        }
+    }
+    
+    public var delegate: CameraNavigatorDelegate?
     var anglePerDistance: CGFloat {
         get {
             return verticalFieldOfViewInRadian / viewSize.height
@@ -58,7 +70,7 @@ class CameraNavigator {
     fileprivate static let maxFieldOfViewInRadian = CGFloat(2)
     fileprivate static let minFieldOfViewInRadian = CGFloat(0.1)
     
-    init(with view: UIView, initialOrientation: SCNQuaternion, verticalFieldOfView: CGFloat) {
+    public init(with view: UIView, initialOrientation: SCNQuaternion, verticalFieldOfView: CGFloat) {
         gestureController = GestureController(with: view)
         viewSize = view.bounds.size
         orientation = GLKQuaternion(initialOrientation)
@@ -68,32 +80,38 @@ class CameraNavigator {
     
     /** To be called to use pan and rotation gestures to navigate the orientation.
         Zoom is always controlled by the pinch gesture. */
-    func setModeToGesture() {
+    public func setModeToGesture() {
         gestureController.enabled = true
+        deviceMotionController.enabled = false
+        deviceAttitude = nil
+        attitudeToOrientationConverter = nil
     }
     
     /** To be called to use device motion to navigate the orientation.
         Zoom is always controlled by the pinch gesture. */
-    func setModeToDeviceMotion(with initialOrientation: SCNQuaternion) {
+    public func setModeToDeviceMotion(with initialOrientation: SCNQuaternion) {
+        deviceMotionController.enabled = true
         gestureController.enabled = false
-        orientation = GLKQuaternion(initialOrientation)
+        while deviceAttitude == nil {}
+        let initialAttitude: GLKQuaternion = self.deviceAttitude!
+        attitudeToOrientationConverter = GLKQuaternionMultiply(GLKQuaternion(initialOrientation), GLKQuaternionInvert(initialAttitude))
     }
 }
 
 extension CameraNavigator: GestureDelegate {
     func didPan(by vector: CGVector) {
-        let horizontalAngle = Float(vector.dx * anglePerDistance) * (-1.0)
-        let verticalAngle = Float(vector.dy * anglePerDistance) * (-1.0)
+        let horizontalAngle = Float(vector.dx * anglePerDistance)
+        let verticalAngle = Float(vector.dy * anglePerDistance)
         let horizontalRotation = GLKQuaternionMakeWithAngleAndAxis(horizontalAngle, 0, 1, 0)
         let verticalRotation = GLKQuaternionMakeWithAngleAndAxis(verticalAngle, 1, 0, 0)
         let totalRotation = GLKQuaternionMultiply(horizontalRotation, verticalRotation)
-        orientation = GLKQuaternionMultiply(totalRotation, orientation)
+        orientation = GLKQuaternionMultiply(orientation, totalRotation)
     }
     
     func didRotate(by angle: CGFloat) {
-        let rotationAngle = Float(angle) * (-1.0)
+        let rotationAngle = Float(angle)
         let rotation = GLKQuaternionMakeWithAngleAndAxis(rotationAngle, 0, 0, 1)
-        orientation = GLKQuaternionMultiply(rotation, orientation)
+        orientation = GLKQuaternionMultiply(orientation, rotation)
     }
     
     func didScale(by ratio: CGFloat) {
@@ -105,6 +123,12 @@ extension CameraNavigator: GestureDelegate {
         } else {
             verticalFieldOfViewInRadian = newFieldOfView
         }
+    }
+}
+
+extension CameraNavigator: DevicoMotionDelegate {
+    func didUpdateAttitude(to quaternion: GLKQuaternion) {
+        deviceAttitude = quaternion
     }
 }
 

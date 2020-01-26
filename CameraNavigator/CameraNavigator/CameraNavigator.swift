@@ -25,6 +25,7 @@ public protocol CameraNavigatorDelegate {
  and the top of a view. */
 public class CameraNavigator {
     let gestureController: GestureController
+    let deviceMotionController = DeviceMotionController()
     let viewSize: CGSize
     var verticalFieldOfView: CGFloat {
         didSet {
@@ -48,6 +49,17 @@ public class CameraNavigator {
             }
         }
     }
+    private var attitudeToOrientationConverter: GLKQuaternion?
+    var deviceAttitude: GLKQuaternion? {
+        didSet {
+            if let attitude = deviceAttitude {
+                if let converter = attitudeToOrientationConverter {
+                    orientation = GLKQuaternionMultiply(converter, attitude)
+                }
+            }
+        }
+    }
+    
     public var delegate: CameraNavigatorDelegate?
     var anglePerDistance: CGFloat {
         get {
@@ -70,13 +82,19 @@ public class CameraNavigator {
         Zoom is always controlled by the pinch gesture. */
     public func setModeToGesture() {
         gestureController.enabled = true
+        deviceMotionController.enabled = false
+        deviceAttitude = nil
+        attitudeToOrientationConverter = nil
     }
     
     /** To be called to use device motion to navigate the orientation.
         Zoom is always controlled by the pinch gesture. */
     public func setModeToDeviceMotion(with initialOrientation: SCNQuaternion) {
+        deviceMotionController.enabled = true
         gestureController.enabled = false
-        orientation = GLKQuaternion(initialOrientation)
+        while deviceAttitude == nil {}
+        let initialAttitude: GLKQuaternion = self.deviceAttitude!
+        attitudeToOrientationConverter = GLKQuaternionMultiply(GLKQuaternion(initialOrientation), GLKQuaternionInvert(initialAttitude))
     }
 }
 
@@ -105,6 +123,12 @@ extension CameraNavigator: GestureDelegate {
         } else {
             verticalFieldOfViewInRadian = newFieldOfView
         }
+    }
+}
+
+extension CameraNavigator: DevicoMotionDelegate {
+    func didUpdateAttitude(to quaternion: GLKQuaternion) {
+        deviceAttitude = quaternion
     }
 }
 

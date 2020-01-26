@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC2B6C2A23DDF685004240D9 /* GLKQuaternion+initWithCMQuaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B6C2923DDF685004240D9 /* GLKQuaternion+initWithCMQuaternion.swift */; };
+		DC2B6C2C23DDF6AC004240D9 /* CMQuaternion+initWithGLKQuaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B6C2B23DDF6AC004240D9 /* CMQuaternion+initWithGLKQuaternion.swift */; };
 		DCC1769323D0F042009CC096 /* CameraNavigator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC1768923D0F042009CC096 /* CameraNavigator.framework */; };
 		DCC1769823D0F042009CC096 /* CameraNavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC1769723D0F042009CC096 /* CameraNavigatorTests.swift */; };
 		DCC1769A23D0F042009CC096 /* CameraNavigator.h in Headers */ = {isa = PBXBuildFile; fileRef = DCC1768C23D0F042009CC096 /* CameraNavigator.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +19,7 @@
 		DCC176AD23D31DF7009CC096 /* RotationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176AC23D31DF7009CC096 /* RotationController.swift */; };
 		DCC176B523D4E766009CC096 /* GLKQuaternion+initWithSCNQuaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176B323D4E766009CC096 /* GLKQuaternion+initWithSCNQuaternion.swift */; };
 		DCC176B623D4E766009CC096 /* SCNQuaternion+initWithGLKQuaternion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176B423D4E766009CC096 /* SCNQuaternion+initWithGLKQuaternion.swift */; };
+		DCC176B823D635CE009CC096 /* DeviceMotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC176B723D635CE009CC096 /* DeviceMotionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC2B6C2923DDF685004240D9 /* GLKQuaternion+initWithCMQuaternion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GLKQuaternion+initWithCMQuaternion.swift"; sourceTree = "<group>"; };
+		DC2B6C2B23DDF6AC004240D9 /* CMQuaternion+initWithGLKQuaternion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMQuaternion+initWithGLKQuaternion.swift"; sourceTree = "<group>"; };
 		DCC1768923D0F042009CC096 /* CameraNavigator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CameraNavigator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC1768C23D0F042009CC096 /* CameraNavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraNavigator.h; sourceTree = "<group>"; };
 		DCC1768D23D0F042009CC096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		DCC176AC23D31DF7009CC096 /* RotationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationController.swift; sourceTree = "<group>"; };
 		DCC176B323D4E766009CC096 /* GLKQuaternion+initWithSCNQuaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GLKQuaternion+initWithSCNQuaternion.swift"; sourceTree = "<group>"; };
 		DCC176B423D4E766009CC096 /* SCNQuaternion+initWithGLKQuaternion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNQuaternion+initWithGLKQuaternion.swift"; sourceTree = "<group>"; };
+		DCC176B723D635CE009CC096 /* DeviceMotionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 				DCC1768C23D0F042009CC096 /* CameraNavigator.h */,
 				DCC1768D23D0F042009CC096 /* Info.plist */,
 				DCC176A323D31C9B009CC096 /* CameraNavigator.swift */,
+				DCC176B723D635CE009CC096 /* DeviceMotionController.swift */,
 			);
 			path = CameraNavigator;
 			sourceTree = "<group>";
@@ -119,6 +126,8 @@
 			children = (
 				DCC176B323D4E766009CC096 /* GLKQuaternion+initWithSCNQuaternion.swift */,
 				DCC176B423D4E766009CC096 /* SCNQuaternion+initWithGLKQuaternion.swift */,
+				DC2B6C2923DDF685004240D9 /* GLKQuaternion+initWithCMQuaternion.swift */,
+				DC2B6C2B23DDF6AC004240D9 /* CMQuaternion+initWithGLKQuaternion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,11 +242,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC176B623D4E766009CC096 /* SCNQuaternion+initWithGLKQuaternion.swift in Sources */,
+				DCC176B823D635CE009CC096 /* DeviceMotionController.swift in Sources */,
 				DCC176AD23D31DF7009CC096 /* RotationController.swift in Sources */,
 				DCC176A423D31C9B009CC096 /* CameraNavigator.swift in Sources */,
+				DC2B6C2C23DDF6AC004240D9 /* CMQuaternion+initWithGLKQuaternion.swift in Sources */,
 				DCC176A923D31DD1009CC096 /* PanController.swift in Sources */,
 				DCC176AB23D31DE3009CC096 /* PinchController.swift in Sources */,
 				DCC176B523D4E766009CC096 /* GLKQuaternion+initWithSCNQuaternion.swift in Sources */,
+				DC2B6C2A23DDF685004240D9 /* GLKQuaternion+initWithCMQuaternion.swift in Sources */,
 				DCC176A723D31D64009CC096 /* GestureController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

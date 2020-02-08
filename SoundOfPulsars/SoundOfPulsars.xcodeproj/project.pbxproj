@@ -28,6 +28,9 @@
 		0AE9B9D923BCDB6B00AF7591 /* LightNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */; };
 		0AE9B9DD23BD12B000AF7591 /* HorizonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */; };
 		0AFDEADE23D6361E008AEA63 /* CameraNavigator.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFDEAD923D635CD008AEA63 /* CameraNavigator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6BCE7E7DDBE170F240948163 /* Pods_SoundOfPulsars_SoundOfPulsarsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC169F108EFA58D3FD6252C /* Pods_SoundOfPulsars_SoundOfPulsarsUITests.framework */; };
+		73B393450615092F15F885DA /* Pods_SoundOfPulsars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3078F573D37830ED8669042F /* Pods_SoundOfPulsars.framework */; };
+		8961A723DFE93D7C8BDA2F8C /* Pods_SoundOfPulsarsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33DFE5C5F4E7E503CFEA600 /* Pods_SoundOfPulsarsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +121,15 @@
 		0AE9B9D823BCDB6B00AF7591 /* LightNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNode.swift; sourceTree = "<group>"; };
 		0AE9B9DC23BD12B000AF7591 /* HorizonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonNode.swift; sourceTree = "<group>"; };
 		0AFDEAD323D635CD008AEA63 /* CameraNavigator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CameraNavigator.xcodeproj; path = ../CameraNavigator/CameraNavigator.xcodeproj; sourceTree = "<group>"; };
+		0B11F03D55705CDFCF41D96C /* Pods-SoundOfPulsars-SoundOfPulsarsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundOfPulsars-SoundOfPulsarsUITests.release.xcconfig"; path = "Target Support Files/Pods-SoundOfPulsars-SoundOfPulsarsUITests/Pods-SoundOfPulsars-SoundOfPulsarsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		187746A25D810F64D44E2E41 /* Pods-SoundOfPulsars-SoundOfPulsarsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundOfPulsars-SoundOfPulsarsUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoundOfPulsars-SoundOfPulsarsUITests/Pods-SoundOfPulsars-SoundOfPulsarsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3078F573D37830ED8669042F /* Pods_SoundOfPulsars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundOfPulsars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F82595D783B1C242F159468 /* Pods-SoundOfPulsars.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundOfPulsars.debug.xcconfig"; path = "Target Support Files/Pods-SoundOfPulsars/Pods-SoundOfPulsars.debug.xcconfig"; sourceTree = "<group>"; };
+		632D27BCF0846A81053FAC47 /* Pods-SoundOfPulsars.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundOfPulsars.release.xcconfig"; path = "Target Support Files/Pods-SoundOfPulsars/Pods-SoundOfPulsars.release.xcconfig"; sourceTree = "<group>"; };
+		8E2A7252D66669EC99E36EAB /* Pods-SoundOfPulsarsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundOfPulsarsTests.release.xcconfig"; path = "Target Support Files/Pods-SoundOfPulsarsTests/Pods-SoundOfPulsarsTests.release.xcconfig"; sourceTree = "<group>"; };
+		A7A18B80C578C7E008E228E8 /* Pods-SoundOfPulsarsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundOfPulsarsTests.debug.xcconfig"; path = "Target Support Files/Pods-SoundOfPulsarsTests/Pods-SoundOfPulsarsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B33DFE5C5F4E7E503CFEA600 /* Pods_SoundOfPulsarsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundOfPulsarsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC169F108EFA58D3FD6252C /* Pods_SoundOfPulsars_SoundOfPulsarsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundOfPulsars_SoundOfPulsarsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B393450615092F15F885DA /* Pods_SoundOfPulsars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8961A723DFE93D7C8BDA2F8C /* Pods_SoundOfPulsarsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BCE7E7DDBE170F240948163 /* Pods_SoundOfPulsars_SoundOfPulsarsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +186,8 @@
 				0A992C9C23AF82EB001F7B28 /* SoundOfPulsarsUITests */,
 				0A3A0D7223AFEFD400C74E8C /* Dependencies */,
 				0A992C7923AF82E9001F7B28 /* Products */,
+				C5C081618AF54910D729BFC7 /* Pods */,
+				4398D68DF700670F142A971F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +277,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4398D68DF700670F142A971F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3078F573D37830ED8669042F /* Pods_SoundOfPulsars.framework */,
+				EEC169F108EFA58D3FD6252C /* Pods_SoundOfPulsars_SoundOfPulsarsUITests.framework */,
+				B33DFE5C5F4E7E503CFEA600 /* Pods_SoundOfPulsarsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5C081618AF54910D729BFC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F82595D783B1C242F159468 /* Pods-SoundOfPulsars.debug.xcconfig */,
+				632D27BCF0846A81053FAC47 /* Pods-SoundOfPulsars.release.xcconfig */,
+				187746A25D810F64D44E2E41 /* Pods-SoundOfPulsars-SoundOfPulsarsUITests.debug.xcconfig */,
+				0B11F03D55705CDFCF41D96C /* Pods-SoundOfPulsars-SoundOfPulsarsUITests.release.xcconfig */,
+				A7A18B80C578C7E008E228E8 /* Pods-SoundOfPulsarsTests.debug.xcconfig */,
+				8E2A7252D66669EC99E36EAB /* Pods-SoundOfPulsarsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,6 +307,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A992CA223AF82EB001F7B28 /* Build configuration list for PBXNativeTarget "SoundOfPulsars" */;
 			buildPhases = (
+				8A2B5C151CA6D63F87A922FC /* [CP] Check Pods Manifest.lock */,
 				0A992C7423AF82E9001F7B28 /* Sources */,
 				0A992C7523AF82E9001F7B28 /* Frameworks */,
 				0A992C7623AF82E9001F7B28 /* Resources */,
@@ -285,6 +326,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A992CA523AF82EB001F7B28 /* Build configuration list for PBXNativeTarget "SoundOfPulsarsTests" */;
 			buildPhases = (
+				B5513507B17B3088F41E6BA3 /* [CP] Check Pods Manifest.lock */,
 				0A992C8A23AF82EA001F7B28 /* Sources */,
 				0A992C8B23AF82EA001F7B28 /* Frameworks */,
 				0A992C8C23AF82EA001F7B28 /* Resources */,
@@ -303,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A992CA823AF82EB001F7B28 /* Build configuration list for PBXNativeTarget "SoundOfPulsarsUITests" */;
 			buildPhases = (
+				C0B22CD75E43CF353F252A0F /* [CP] Check Pods Manifest.lock */,
 				0A992C9523AF82EB001F7B28 /* Sources */,
 				0A992C9623AF82EB001F7B28 /* Frameworks */,
 				0A992C9723AF82EB001F7B28 /* Resources */,
@@ -427,6 +470,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A2B5C151CA6D63F87A922FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundOfPulsars-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5513507B17B3088F41E6BA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundOfPulsarsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0B22CD75E43CF353F252A0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundOfPulsars-SoundOfPulsarsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A992C7423AF82E9001F7B28 /* Sources */ = {
@@ -617,6 +729,7 @@
 		};
 		0A992CA323AF82EB001F7B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F82595D783B1C242F159468 /* Pods-SoundOfPulsars.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -629,12 +742,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.SoundOfPulsars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0A992CA423AF82EB001F7B28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 632D27BCF0846A81053FAC47 /* Pods-SoundOfPulsars.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -647,12 +761,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.esmago.SoundOfPulsars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		0A992CA623AF82EB001F7B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A18B80C578C7E008E228E8 /* Pods-SoundOfPulsarsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -675,6 +790,7 @@
 		};
 		0A992CA723AF82EB001F7B28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2A7252D66669EC99E36EAB /* Pods-SoundOfPulsarsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -697,6 +813,7 @@
 		};
 		0A992CA923AF82EB001F7B28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187746A25D810F64D44E2E41 /* Pods-SoundOfPulsars-SoundOfPulsarsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,6 +834,7 @@
 		};
 		0A992CAA23AF82EB001F7B28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B11F03D55705CDFCF41D96C /* Pods-SoundOfPulsars-SoundOfPulsarsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

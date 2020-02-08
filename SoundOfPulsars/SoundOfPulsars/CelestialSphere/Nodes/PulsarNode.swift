@@ -8,11 +8,24 @@
 
 import SceneKit
 import PulsarDatasource
+import AudioKit
 
 final class PulsarNode: SCNNode {
     
     private var pulsar: Pulsar!
     private var glowNode = SCNNode()
+    
+    var oscillator: AKOscillator!
+   
+    var amplitude: Double = 0.0 {
+        didSet {
+            if amplitude != 0.0, let isStarted = oscillator?.isStarted, !isStarted {
+                oscillator?.start()
+            }
+            oscillator?.amplitude = amplitude
+        }
+    }
+    
     
     convenience init(with pulsar: Pulsar) {
         self.init()
@@ -22,8 +35,15 @@ final class PulsarNode: SCNNode {
         geometry?.firstMaterial?.diffuse.contents = pulsar.color
         geometry?.firstMaterial?.isDoubleSided = true
         position = SCNVector3Make(pulsar.x, pulsar.y, pulsar.z)
-        
+        setupOscillator()
         setupGlowNode()
+    }
+    
+    private func setupOscillator() {
+        oscillator = AKOscillator()
+        oscillator.frequency = pulsar.frequency
+        oscillator.amplitude = self.amplitude
+        oscillator?.start()
     }
     
     private override init() {

@@ -8,6 +8,7 @@
 
 import SceneKit
 import PulsarDatasource
+import AudioKit
 
 final class SphereNode: SCNNode {
     
@@ -15,6 +16,7 @@ final class SphereNode: SCNNode {
     let pulsarsNode = SCNNode()
     let textsNode   = SCNNode()
     let paralelsAndMeridiansNode = CelestialCirclesNode.shared
+    let mixer = AKMixer()
     
     private override init() {
         super.init()
@@ -25,6 +27,12 @@ final class SphereNode: SCNNode {
         position = SCNVector3Make(0, 0, 0)
         
         createPulsarsAndTexts()
+        AudioKit.output = mixer
+        do {
+            try AudioKit.start()
+        } catch {
+            print("Failed starting audio kit")
+        }
         addChildNode(pulsarsNode)
         addChildNode(textsNode)
         addChildNode(paralelsAndMeridiansNode)
@@ -38,6 +46,7 @@ final class SphereNode: SCNNode {
         for pulsar in Datasource.audiblePulsars {
             let pNode = PulsarNode(with: pulsar)
             let tNode = TextNode(with: pulsar)
+            mixer.connect(input: pNode.oscillator)
             pulsarsNode.addChildNode(pNode)
             textsNode.addChildNode(tNode)
         }

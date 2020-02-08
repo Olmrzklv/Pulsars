@@ -53,7 +53,9 @@ extension PulsarViewController: SCNSceneRendererDelegate {
             guard let pulsarNode = $0 as? PulsarNode else {return}
             if  sceneView.isNode($0, insideFrustumOf: pointOfView) {
                 pulsarNode.addGlow()
-            }else {
+                pulsarNode.amplitude = 0.5
+            } else {
+                pulsarNode.amplitude = 0.0
                 pulsarNode.removeGlow()
             }
 

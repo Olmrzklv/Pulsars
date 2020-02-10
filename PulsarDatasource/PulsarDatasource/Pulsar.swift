@@ -10,7 +10,7 @@ import UIKit
 
 public class Pulsar {
     
-    private static let R: Float = 9.80
+    public static let R: Float = 9.80
     private var RAJ: String!
     private var DECJ: String
     

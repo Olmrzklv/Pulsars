@@ -12,7 +12,7 @@ import AudioKit
 
 final class PulsarNode: SCNNode {
     
-    private var pulsar: Pulsar!
+    var pulsar: Pulsar!
     private var glowNode = SCNNode()
     
     var oscillator: AKOscillator!
@@ -21,6 +21,7 @@ final class PulsarNode: SCNNode {
         didSet {
             if amplitude != 0.0, let isStarted = oscillator?.isStarted, !isStarted {
                 oscillator?.start()
+                changeGlowAmplitude(amplitude)
             }
             oscillator?.amplitude = amplitude
         }
@@ -63,21 +64,20 @@ extension PulsarNode {
         glowNode.geometry?.firstMaterial?.isDoubleSided = true
         glowNode.position = SCNVector3Make(0, 0, 0)
         self.addChildNode(glowNode)
-
+    }
+    
+    private func changeGlowAmplitude(_ amplitude: Double) {
+        if glowNode.animationKeys.contains("radius") {
+            glowNode.removeAnimation(forKey: "radius")
+        }
+        
         let animation = CABasicAnimation(keyPath: "geometry.radius")
         animation.fromValue = 0.03
-        animation.toValue = 0.5
+        animation.toValue = amplitude
+        print(amplitude)
         animation.duration = 0.2
         animation.autoreverses = true
         animation.repeatCount = .infinity
         glowNode.addAnimation(animation, forKey: "radius")
-    }
-    
-    func addGlow() {
-        addChildNode(glowNode)
-    }
-    
-    func removeGlow() {
-        glowNode.removeFromParentNode()
     }
 }

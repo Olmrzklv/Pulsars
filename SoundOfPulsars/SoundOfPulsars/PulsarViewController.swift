@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import CameraNavigator
+import PulsarDatasource
 
 class PulsarViewController: UIViewController {
 
@@ -48,17 +49,10 @@ extension PulsarViewController: SCNSceneRendererDelegate {
         sphereNode.textsNode.childNodes.forEach {
             $0.orientation = cameraNode.orientation
         }
-        guard let pointOfView = sceneView.pointOfView else { return }
+       // guard let pointOfView = sceneView.pointOfView else { return }
         sphereNode.pulsarsNode.childNodes.forEach {
             guard let pulsarNode = $0 as? PulsarNode else {return}
-            if  sceneView.isNode($0, insideFrustumOf: pointOfView) {
-                pulsarNode.addGlow()
-                pulsarNode.amplitude = 0.5
-            } else {
-                pulsarNode.amplitude = 0.0
-                pulsarNode.removeGlow()
-            }
-
+            pulsarNode.amplitude = Double(getAmplitude(for: pulsarNode.pulsar))
         }
     }
 }
@@ -71,6 +65,18 @@ extension PulsarViewController: CameraNavigatorDelegate {
     func didUpdateVerticalFieldOfView(to vfov: CGFloat) {
         cameraNode.camera?.fieldOfView = vfov
     }
-    
-    
+}
+
+extension PulsarViewController {
+    func getAmplitude(for pulsar: Pulsar) -> Float {
+        let direction = cameraNode.direction
+        let product = GLKVector3DotProduct(direction, GLKVector3Make(pulsar.x, pulsar.y, pulsar.z))
+        let angleBetweenPulsarAndCenter:Float = acos(product / Pulsar.R)
+        let angleInDegrees:Float = (angleBetweenPulsarAndCenter * 180) / Float.pi
+        
+        guard let fieldOfView = cameraNode.camera?.fieldOfView else { return 0.0 }
+        let fOV: Float = Float(fieldOfView)
+        let amplitude:Float = 4 * (1/4 - (angleInDegrees / fOV))
+        return amplitude > 0 ? (amplitude * 10) : 0.0
+    }
 }

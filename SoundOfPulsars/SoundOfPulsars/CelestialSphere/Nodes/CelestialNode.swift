@@ -13,8 +13,8 @@ enum CelestialNode {
         return SphereNode.shared
     }
     
-    static var Camera: SCNNode {
-        return CameraNode.createCameraNode()
+    static var Camera: CameraNode {
+        return CameraNode()
     }
     
     static var Light: SCNNode {

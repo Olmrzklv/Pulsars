@@ -10,7 +10,7 @@ import UIKit
 
 public class Pulsar {
     
-    private static let R: Float = 9.80
+    public static let R: Float = 9.80
     private var RAJ: String!
     private var DECJ: String
     
@@ -20,6 +20,16 @@ public class Pulsar {
     public var y: Float!
     public var z: Float!
     public var color: UIColor!
+    
+    ///Spherical coordinates computed from cartesian coordinates.
+    public var theta: Float {
+        return asin(y / Pulsar.R)
+    }
+    
+    ///Spherical coordinates computed from cartesian coordinates.
+    public var phi: Float {
+        return atan2(-z, -x)
+    }
     
     public init(name: String, RAJ: String, DECJ: String, frequency: Double) {
         self.name = name

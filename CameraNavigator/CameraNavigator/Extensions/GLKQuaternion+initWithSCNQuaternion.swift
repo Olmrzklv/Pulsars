@@ -9,7 +9,7 @@
 import Foundation
 import SceneKit
 
-extension GLKQuaternion {
+public extension GLKQuaternion {
     init(_ scnQuaternion: SCNQuaternion) {
         self = GLKQuaternionMake(scnQuaternion.x, scnQuaternion.y, scnQuaternion.z, scnQuaternion.w)
     }
